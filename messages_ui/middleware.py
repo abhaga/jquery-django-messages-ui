@@ -3,8 +3,9 @@ import json
 from django.contrib import messages
 from django.utils.six import text_type
 
+from django.utils.deprecation import MiddlewareMixin
 
-class AjaxMessagesMiddleware(object):
+class AjaxMessagesMiddleware(MiddlewareMixin):
     """
     Middleware to handle messages for AJAX requests.
 
